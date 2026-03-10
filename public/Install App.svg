@@ -1,0 +1,33 @@
+<svg width="158" height="76" viewBox="0 0 158 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-50" y="-50" width="258" height="176"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(25px);clip-path:url(#bgblur_0_2_68420_clip_path);height:100%;width:100%"></div></foreignObject><g filter="url(#filter0_n_2_68420)" data-figma-bg-blur-radius="50">
+<mask id="path-1-inside-1_2_68420" fill="white">
+<path d="M0 38C0 17.0132 17.0132 0 38 0H120C140.987 0 158 17.0132 158 38C158 58.9868 140.987 76 120 76H38C17.0132 76 0 58.9868 0 38Z"/>
+</mask>
+<path d="M0 38C0 17.0132 17.0132 0 38 0H120C140.987 0 158 17.0132 158 38C158 58.9868 140.987 76 120 76H38C17.0132 76 0 58.9868 0 38Z" fill="#E9E9E9" fill-opacity="0.24"/>
+<path d="M-1 37C-1 15.4609 16.4609 -2 38 -2H120C141.539 -2 159 15.4609 159 37L157 38C157 18.1177 140.435 2 120 2H38C17.5655 2 1 18.1177 1 38L-1 37ZM159 38C159 59.5391 141.539 77 120 77H38C16.4609 77 -1 59.5391 -1 38H1C1 58.4345 17.5655 75 38 75H120C140.435 75 157 58.4345 157 38H159ZM38 77C16.4609 77 -1 59.5391 -1 38V37C-1 15.4609 16.4609 -2 38 -2V2C17.5655 2 1 18.1177 1 38C1 58.4345 17.5655 75 38 75V77ZM120 -2C141.539 -2 159 15.4609 159 37V38C159 59.5391 141.539 77 120 77V75C140.435 75 157 58.4345 157 38C157 18.1177 140.435 2 120 2V-2Z" fill="url(#paint0_linear_2_68420)" fill-opacity="0.6" mask="url(#path-1-inside-1_2_68420)"/>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Outfit" font-size="20" letter-spacing="0em"><tspan x="32.4863" y="47.4">Install App</tspan></text>
+</g>
+<defs>
+<filter id="filter0_n_2_68420" x="-50" y="-50" width="258" height="176" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="5 5" stitchTiles="stitch" numOctaves="3" result="noise" seed="5164" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(0, 0, 0, 0.13)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_2_68420">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<clipPath id="bgblur_0_2_68420_clip_path" transform="translate(50 50)"><path d="M0 38C0 17.0132 17.0132 0 38 0H120C140.987 0 158 17.0132 158 38C158 58.9868 140.987 76 120 76H38C17.0132 76 0 58.9868 0 38Z"/>
+</clipPath><linearGradient id="paint0_linear_2_68420" x1="66.4658" y1="-2.72071e-06" x2="110.237" y2="30.9064" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.49"/>
+<stop offset="1" stop-color="#DDDDDD" stop-opacity="0.25"/>
+</linearGradient>
+</defs>
+</svg>
