@@ -41,9 +41,11 @@ export function AppStoreBadges({
   return (
     <div className={cn("flex flex-wrap items-center justify-center gap-4", className)}>
       <a
-        href="#"
+        href="https://apps.apple.com/us/app/kitme-closet-auto-synced/id1631891471"
         className={badgeClasses}
         aria-label="Download on the App Store"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div className={innerClasses}>
           <svg className={cn("w-7 h-7", iconClasses)} viewBox="0 0 24 24" fill="currentColor">
@@ -56,9 +58,11 @@ export function AppStoreBadges({
         </div>
       </a>
       <a
-        href="#"
+        href="https://play.google.com/store/apps/details?id=com.trykitme.kitme_ui&hl=en_US"
         className={badgeClasses}
         aria-label="Get it on Google Play"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <div className={innerClasses}>
           <img src="/Google Play logo.svg" alt="Google Play" className="w-5 h-5 object-contain" />

@@ -74,8 +74,8 @@ export function Navbar() {
 
         {/* Install App Button */}
         <div className="hidden lg:block">
-          <Button className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2.5 h-auto font-medium shadow-lg">
-            Install App
+          <Button asChild className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-2.5 h-auto font-medium shadow-lg">
+            <Link href="#retailers">Install App</Link>
           </Button>
         </div>
 
@@ -115,8 +115,10 @@ export function Navbar() {
             </li>
           ))}
           <li className="mt-4">
-            <Button className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 h-auto font-medium">
-              Install App
+            <Button asChild className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90 py-3 h-auto font-medium">
+              <Link href="#retailers" onClick={() => setMobileMenuOpen(false)}>
+                Install App
+              </Link>
             </Button>
           </li>
         </ul>

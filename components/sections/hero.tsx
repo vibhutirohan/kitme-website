@@ -94,7 +94,7 @@ function HeroNavigation() {
 
         {/* Install Button */}
         <Link
-          href="#"
+          href="#retailers"
           className="bg-white/20 backdrop-blur-md border border-white/20 text-white rounded-[3rem] px-8 py-3.5 text-sm font-medium hover:bg-white/30 transition-all duration-300"
         >
           Install App

@@ -67,13 +67,13 @@ export function Footer() {
 
           {/* Right: Social Links */}
           <div className="flex flex-col gap-4 text-left md:text-right pt-2 md:mr-10">
-            <a href="#" className="text-black text-[20px] font-medium hover:opacity-70 transition-opacity">
+            <a href="https://www.instagram.com/trykitme/" target="_blank" rel="noopener noreferrer" className="text-black text-[20px] font-medium hover:opacity-70 transition-opacity">
               Instagram
             </a>
-            <a href="#" className="text-black text-[20px] font-medium hover:opacity-70 transition-opacity">
+            <a href="https://www.tiktok.com/@trykitme?lang=en-GB&is_from_webapp=1&sender_device=mobile&sender_web_id=7615638099200378382" target="_blank" rel="noopener noreferrer" className="text-black text-[20px] font-medium hover:opacity-70 transition-opacity">
               Tiktok
             </a>
-            <a href="#" className="text-black text-[20px] font-medium hover:opacity-70 transition-opacity">
+            <a href="https://www.linkedin.com/company/kitme/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="text-black text-[20px] font-medium hover:opacity-70 transition-opacity">
               Linkedin
             </a>
           </div>
