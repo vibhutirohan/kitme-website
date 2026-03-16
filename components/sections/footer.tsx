@@ -59,7 +59,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start mb-40 gap-16">
           {/* Left: Tagline and Badges */}
           <div className="flex flex-col gap-8">
-            <h2 className="font-sans text-[48px] md:text-[64px] lg:text-[76px] font-medium tracking-tight leading-none text-black">
+            <h2 className="font-sans text-[36px] xs:text-[48px] md:text-[64px] lg:text-[76px] font-medium tracking-tight leading-none text-black">
               Your Fashion Hub
             </h2>
             <AppStoreBadges variant="dark" className="justify-start gap-4 mt-2" />

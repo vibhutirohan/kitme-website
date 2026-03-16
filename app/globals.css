@@ -130,10 +130,24 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 100px;
+  }
+
+  section {
+    scroll-margin-top: 120px;
+  }
+
+  @media (max-width: 768px) {
+    section {
+      padding-top: 100px !important;
+      padding-bottom: 60px !important;
+    }
   }
 }
 

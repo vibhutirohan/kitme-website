@@ -22,27 +22,23 @@ const FAQS = [
   {
     question: "How does Kitme work?",
     answer:
-      "Simply connect your email, and our patented technology automatically scans your purchase receipts to build your digital closet. From there, you can organize items, create outfits, share with friends, and receive daily personalized recommendations.",
+      "Our app aggregates your purchase history through the Gmail API and helps you list them on platforms like eBay with just a few taps.",
   },
-  {
-    question: "What if I don't have an eBay account?",
-    answer:
-      "No worries! Kitme works with purchases from any retailer. We scan receipts from major fashion brands, department stores, and online shops. You don't need an eBay account to use Kitme.",
-  },
+
   {
     question: "Can I use the app without a Gmail account?",
     answer:
-      "Currently, Kitme integrates best with Gmail for automatic receipt scanning. However, we're working on expanding support to other email providers. You can also manually add items to your closet.",
+      "At the moment, you have to have Gmail to use Kitme.  However, we’re exploring support for other email providers and will have that ready soon.",
   },
   {
     question: "Do you store my Gmail data?",
     answer:
-      "We take your privacy seriously. Kitme only scans for shopping receipts and doesn't store your email content. All data is encrypted, and we follow strict privacy protocols to protect your information.",
+      "No, we only access the purchase data needed to optimize your listings and create your digital closet. This data is securely processed and not stored on our servers.",
   },
   {
     question: "What if I encounter a problem using the app?",
     answer:
-      "Our support team is here to help! You can reach us through the Contact section below, or email us directly at support@kitme.com. We typically respond within 24 hours.",
+      "We’re here to help! You can reach our support team through the app or email us at support@trykitme.com."
   },
 ] as const
 
@@ -59,39 +55,76 @@ const SECTION_CONTENT = {
 
 export function FAQSection() {
   return (
-    <section id="faq" className="w-full bg-white py-24 px-6 md:px-12 overflow-hidden">
+    <section id="faq" className="w-full bg-[#FAFAFA] pt-24 pb-32 px-6 md:px-12 lg:px-24 overflow-hidden flex justify-center">
       <div className="max-w-[1280px] mx-auto w-full">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 md:gap-24">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-24 w-full">
 
-          {/* Left Column */}
-          <div className="flex flex-col">
-            <h2 className="font-sans text-[48px] md:text-[64px] font-bold text-black mb-6 leading-tight tracking-tight">
+          {/* Left Column Text */}
+          <div className="flex flex-col items-start w-full lg:w-[35%] shrink-0 pt-0 lg:pt-4">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-black mb-6 text-4xl sm:text-[52px]"
+              style={{
+                fontFamily: 'var(--font-outfit), Outfit, sans-serif',
+                fontWeight: 700,
+                lineHeight: '1.2'
+              }}
+            >
               FAQs
-            </h2>
-            <p className="text-black/80 text-[16px] md:text-[18px] leading-[1.6] font-medium max-w-[320px]">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-[#333] max-w-[340px]"
+              style={{
+                fontFamily: 'var(--font-outfit), Outfit, sans-serif',
+                fontSize: '18px',
+                fontWeight: 400,
+                lineHeight: '1.6'
+              }}
+            >
               {SECTION_CONTENT.description}
-            </p>
+            </motion.p>
           </div>
 
           {/* Right Column: Accordion */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full mt-4 md:mt-0"
+            className="w-full lg:w-[60%] shrink-0"
           >
             <Accordion type="single" collapsible className="w-full">
               {FAQS.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-white border-b border-gray-200/60 first:border-t-0"
+                  className="bg-transparent border-b border-gray-200/80 first:border-t-0"
                 >
-                  <AccordionTrigger className="text-left font-medium text-black hover:no-underline py-6 text-[16px] md:text-[18px] [&>svg]:opacity-60">
+                  <AccordionTrigger
+                    className="text-left font-medium text-black hover:no-underline py-6 md:py-8"
+                    style={{
+                      fontFamily: 'var(--font-outfit), Outfit, sans-serif',
+                      fontSize: '18px',
+                      fontWeight: 500,
+                    }}
+                  >
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-[#555555] pb-6 leading-relaxed text-[15px] md:text-[16px] font-medium max-w-3xl">
+                  <AccordionContent
+                    className="text-[#555] pb-8 leading-relaxed max-w-2xl"
+                    style={{
+                      fontFamily: 'var(--font-outfit), Outfit, sans-serif',
+                      fontSize: '16px',
+                      fontWeight: 400,
+                    }}
+                  >
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

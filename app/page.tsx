@@ -5,7 +5,7 @@ import {
   PersonalizedSection,
   DailyDropsSection,
   CommunitySection,
-  RetailersSection,
+  ForRetailersSection,
   FAQSection,
   ContactSection,
   Footer,
@@ -13,14 +13,15 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen overflow-x-hidden w-full relative">
+      <div id="top" className="absolute top-0 left-0" />
       <Navbar />
       <Hero />
       <Features />
       <PersonalizedSection />
       <DailyDropsSection />
       <CommunitySection />
-      <RetailersSection />
+      <ForRetailersSection />
       <FAQSection />
       <ContactSection />
       <Footer />
