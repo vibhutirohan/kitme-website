@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils"
 
 interface FeaturePillProps {
   icon: React.ElementType | string
-  title: string
-  description: string
+  title: React.ReactNode
+  description?: React.ReactNode
   index?: number
   className?: string
   variant?: "light" | "dark"
@@ -30,7 +30,7 @@ export function FeaturePill({
       e.preventDefault();
       const target = document.querySelector(href);
       if (target) {
-        const headerOffset = 100; // Account for sticky header
+        const headerOffset = 110; // Account for sticky header
         const elementPosition = target.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({
@@ -49,23 +49,34 @@ export function FeaturePill({
       onClick={href ? handleClick as any : undefined}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
+      whileHover={{
+        scale: 1.02,
+        boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+        backgroundColor: !isLight ? "rgba(233, 233, 233, 0.32)" : "rgba(255, 255, 255, 1)"
+      }}
+      whileTap={{ scale: 0.98 }}
+      transition={{
+        duration: 0.5,
+        delay: 1.4 + index * 0.1,
+        backgroundColor: { duration: 0.2 },
+        scale: { type: "spring", stiffness: 400, damping: 25 }
+      }}
       className={cn(
-        "group relative rounded-[40px] px-5 py-5 md:py-6 min-h-[100px] flex items-center justify-start transition-all duration-300 cursor-pointer shadow-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-[#D49AAA] focus:ring-offset-2 active:scale-95",
+        "group relative px-5 py-5 md:py-6 flex items-center justify-start transition-all duration-300 cursor-pointer shadow-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-[#D49AAA] focus:ring-offset-2",
         isLight
-          ? "bg-white border border-gray-100 hover:shadow-xl hover:-translate-y-1"
-          : "hover:opacity-90 hover:shadow-2xl hover:-translate-y-1",
+          ? "bg-white border border-gray-100 rounded-[40px] min-h-[100px]"
+          : "hover:opacity-100 shadow-xl rounded-full w-full max-w-[340px] h-[110px]",
         className
       )}
       style={{
-        borderRadius: '40px',
+        borderRadius: !isLight ? '9999px' : '40px',
         border: !isLight ? '1px solid rgba(255, 255, 255, 0.24)' : undefined,
         background: !isLight ? 'rgba(233, 233, 233, 0.24)' : undefined,
         backdropFilter: !isLight ? 'blur(25px)' : undefined,
       }}
     >
       {!isLight && (
-        <svg className="absolute inset-0 w-full h-full pointer-events-none rounded-[40px]" style={{ zIndex: 0 }}>
+        <svg className="absolute inset-0 w-full h-full pointer-events-none rounded-full" style={{ zIndex: 0 }}>
           <defs>
             <filter id={`filter_noise_${index}`} x="-50%" y="-50%" width="200%" height="200%" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
               <feFlood floodOpacity="0" result="BackgroundImageFix" />
@@ -106,15 +117,16 @@ export function FeaturePill({
         <div className="flex flex-col flex-1 pr-1">
           <p
             className={cn(
-              "text-[15px] md:text-[16px] leading-[1.3]",
+              "text-[15px] md:text-[16px] leading-[1.4] md:leading-[1.3]",
               isLight ? "text-foreground" : "text-white"
             )}
             style={{
               fontFamily: 'var(--font-outfit), Outfit, sans-serif',
               fontWeight: 400,
-            }}
+              textWrap: 'balance'
+            } as any}
           >
-            {title}{description ? ` ${description}` : ''}
+            {title}{description && <> {description}</>}
           </p>
         </div>
       </div>

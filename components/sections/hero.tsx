@@ -7,27 +7,24 @@ import { AppStoreBadges } from "@/components/ui/app-store-badges"
 
 const HERO_FEATURES: {
   icon: ElementType | string
-  title: string
-  description: string
+  title: React.ReactNode
+  description?: React.ReactNode
   href?: string
 }[] = [
     {
       icon: "/mail-validation-01.svg",
-      title: "Sync Your Email:",
-      description: "Updates your closet automatically at 7pm!",
-      href: "#explore",
+      title: "Sync Your Email: Updates your closet automatically at 7p.m EST",
+      href: "#sync-your-email",
     },
     {
       icon: "/wardrobe-03.svg",
-      title: "Make your closet social:",
-      description: "Get inspo from friends and the Kitme community",
-      href: "#community",
+      title: "Make your closet social: Get inspo from friends and the Kitme community",
+      href: "#share-your-closet",
     },
     {
       icon: "/tag-02.svg",
-      title: "Find Sales In Your Size:",
-      description: "Curated From Your Closet",
-      href: "#personalized",
+      title: "Find Sales In Your Size: Curated From Your Closet",
+      href: "#daily-drops",
     },
     {
       icon: () => (
@@ -44,9 +41,8 @@ const HERO_FEATURES: {
           <circle cx="12" cy="12" r="10" />
         </svg>
       ),
-      title: "Connect with real stylists",
-      description: "for all wardrobe needs",
-      href: "#talk-to-a-stylist",
+      title: "Connect with real stylists for all wardrobe needs",
+      href: "#our-stylists",
     },
   ]
 
@@ -80,8 +76,11 @@ function HeroContent() {
           </motion.p>
         )}
 
-        <h1 className="font-sans text-[2.5rem] xs:text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-semibold mb-4 sm:mb-6 leading-[1.1] md:leading-[1.1] tracking-tight">
-          <span className="inline-block sm:mr-3 text-[#fad4dc]">
+        <h1
+          className="text-[2.2rem] xs:text-4xl sm:text-5xl md:text-7xl lg:text-[96px] font-medium mb-4 sm:mb-6 leading-[1.2] lg:leading-[115px] tracking-tight lg:tracking-[-1.92px]"
+          style={{ fontFamily: 'var(--font-outfit), Outfit, sans-serif' }}
+        >
+          <span className="inline-block sm:mr-3 text-[#F1BFCE]">
             {HERO_CONTENT.headline.line1}
           </span>
           <br className="sm:hidden" />
@@ -122,7 +121,7 @@ function HeroFeatures() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-[1400px] mx-auto">
         {HERO_FEATURES.map((feature, index) => (
           <FeaturePill
-            key={feature.title}
+            key={index}
             icon={feature.icon}
             title={feature.title}
             description={feature.description}
@@ -140,11 +139,11 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col justify-between rounded-bl-[60px] rounded-br-[60px] overflow-hidden scroll-mt-28"
     >
       <div className="absolute inset-0 z-0">
         <img
-          src="/layer.png"
+          src="/bg1.png"
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover object-[65%_center] sm:object-[center_top] brightness-[0.93] contrast-[0.96] saturate-[0.94]"
         />

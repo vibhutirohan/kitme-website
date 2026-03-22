@@ -3,9 +3,6 @@
 import { motion } from "framer-motion"
 import type { ReactNode } from "react"
 
-// ============================================================================
-// DATA - Edit these to customize the personalized section
-// ============================================================================
 
 const CARDS: {
   iconSrc: string
@@ -58,9 +55,6 @@ const CARDS: {
     },
   ]
 
-// ============================================================================
-// COMPONENTS
-// ============================================================================
 
 interface PersonalizedCardProps {
   iconSrc: string
@@ -87,7 +81,10 @@ function PersonalizedCard({
       transition={{ duration: 0.5, delay: index * 0.15 }}
       className="group relative overflow-hidden rounded-[32px] bg-[#F8F8F8] px-8 py-8 md:px-10 md:py-10 flex flex-col justify-start min-h-[340px] md:min-h-[380px]"
     >
-      <div className="absolute top-8 right-8 flex h-16 w-16 items-center justify-center rounded-full bg-[#F1F1F1]">
+      <div
+        className="absolute top-8 right-8 flex h-[76px] w-[74px] items-center justify-center bg-center bg-no-repeat bg-contain"
+        style={{ backgroundImage: "url('/Ellipse 271.svg')" }}
+      >
         <img
           src={iconSrc}
           alt="Icon"
@@ -131,26 +128,23 @@ function PersonalizedCard({
   )
 }
 
-// ============================================================================
-// MAIN COMPONENT
-// ============================================================================
 
 export function PersonalizedSection() {
   return (
-    <section id="solution" className="w-full bg-white py-24 px-6 md:px-12">
+    <section id="solution" className="w-full bg-white py-24 px-6 md:px-12 scroll-mt-28">
       <div className="max-w-[1280px] mx-auto w-full">
         <div className="text-center mb-16 flex justify-center w-full">
           <h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px]"
             style={{
-              width: "100%",
-              maxWidth: "1042px",
+              width: "80%",
+              maxWidth: "1000px",
               color: "#000",
               textAlign: "center",
               fontFamily: "var(--font-outfit), Outfit, sans-serif",
               fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "1.2",
+              fontWeight: 400,
+              lineHeight: "1",
             }}
           >
             A new, personalized experience!

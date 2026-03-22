@@ -11,9 +11,8 @@ const NAV_LINKS = [
   { href: "#top", label: "Home" },
   { href: "#explore", label: "The App" },
   { href: "#daily-drops", label: "Daily Drops" },
-  { href: "#talk-to-a-stylist", label: "Our Stylists" },
+  { href: "#our-stylists", label: "Our Stylists" },
   { href: "#faq", label: "FAQ" },
-  { href: "#community", label: "Community" },
   { href: "#contact", label: "Contact" },
 ] as const
 
@@ -46,13 +45,9 @@ export function Navbar() {
     const target = document.querySelector(href)
     if (!target) return
 
-    const headerOffset = 110
-    const elementTop =
-      target.getBoundingClientRect().top + window.pageYOffset - headerOffset
-
-    window.scrollTo({
-      top: elementTop,
+    target.scrollIntoView({
       behavior: "smooth",
+      block: "start",
     })
   }
 
@@ -74,23 +69,24 @@ export function Navbar() {
   return (
     <header className="fixed top-6 left-0 right-0 z-[100] px-4 md:px-8">
       <nav className="mx-auto max-w-[1600px] flex items-center justify-between gap-4">
-        {/* Logo - removed outer extra pill layer */}
+        {/* Logo Pill */}
         <Link
-          href="/"
+          href="#top"
           onClick={(e) => handleNavClick(e, "#top")}
-          className="shrink-0 flex items-center justify-center transition-opacity duration-300 hover:opacity-90"
+          className="shrink-0 flex items-center justify-center transition-all duration-300 hover:opacity-90 h-[48px] md:h-[56px]"
         >
           <img
-            src="/kitme frame.svg"
+            src="/Frame 1618873126.svg"
             alt="Kitme"
-            className="w-[90px] h-[34px] md:w-[130px] md:h-[44px] object-contain"
+            className="w-auto h-full object-contain"
           />
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav Pill */}
         <div
           className={cn(
-            "hidden md:flex items-center rounded-full px-2 py-1.5 shadow-lg transition-all duration-300",
+            "hidden md:flex items-center justify-center rounded-full px-2 shadow-lg transition-all duration-300",
+            "md:h-[56px]",
             scrolled
               ? "bg-white/95 border border-black/10 backdrop-blur-md"
               : "bg-white/10 border border-white/20 backdrop-blur-[20px]"
@@ -102,7 +98,7 @@ export function Navbar() {
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
               className={cn(
-                "px-3 lg:px-6 py-2.5 text-[14px] lg:text-[15px] rounded-[2rem] transition-all duration-300",
+                "px-3 lg:px-6 flex items-center justify-center h-[40px] text-[14px] lg:text-[15px] rounded-full transition-all duration-300",
                 scrolled
                   ? "text-black/80 hover:text-black hover:bg-black/5"
                   : "text-white/90 hover:text-white hover:bg-white/10"
@@ -113,12 +109,13 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* Install App */}
+        {/* CTA Pill */}
         <Link
-          href="#retailers"
-          onClick={(e) => handleNavClick(e, "#retailers")}
+          href="#download"
+          onClick={(e) => handleNavClick(e, "#download")}
           className={cn(
-            "hidden md:flex rounded-full px-8 py-3.5 text-sm font-medium transition-all duration-300 shadow-lg",
+            "hidden md:flex items-center justify-center rounded-full px-8 text-sm font-medium transition-all duration-300 shadow-lg",
+            "md:h-[56px]",
             scrolled
               ? "bg-[#7D3842] text-white hover:bg-[#6d2f38]"
               : "bg-white/12 border border-white/20 text-white backdrop-blur-[20px] hover:bg-white/20"
@@ -131,7 +128,8 @@ export function Navbar() {
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className={cn(
-            "md:hidden rounded-full p-3 shadow-lg transition-all duration-300",
+            "md:hidden flex items-center justify-center rounded-full px-4 shadow-lg transition-all duration-300",
+            "h-[48px]",
             scrolled
               ? "bg-white/95 border border-black/10 text-black"
               : "bg-white/10 border border-white/20 text-white backdrop-blur-[20px]"
@@ -174,8 +172,8 @@ export function Navbar() {
 
           <li className="mt-4">
             <Link
-              href="#retailers"
-              onClick={(e) => handleNavClick(e, "#retailers")}
+              href="#download"
+              onClick={(e) => handleNavClick(e, "#download")}
               className={cn(
                 "block w-full text-center rounded-full py-3 font-medium transition-all duration-300",
                 scrolled

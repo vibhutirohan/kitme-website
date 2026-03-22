@@ -1,0 +1,34 @@
+<svg width="839" height="76" viewBox="0 0 839 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_n_2_68411)" data-figma-bg-blur-radius="50">
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Outfit" font-size="20" letter-spacing="0em"><tspan x="37.3594" y="47.4">Home</tspan></text>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Outfit" font-size="20" letter-spacing="0em"><tspan x="127" y="47.4">The App</tspan></text>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Outfit" font-size="20" letter-spacing="0em"><tspan x="238" y="47.4">Daily Drops</tspan></text>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Outfit" font-size="20" letter-spacing="0em"><tspan x="378" y="47.4">Our Stylists</tspan></text>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Outfit" font-size="20" letter-spacing="0em"><tspan x="515" y="47.4">FAQ</tspan></text>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Outfit" font-size="20" letter-spacing="0em"><tspan x="591" y="47.4">Community</tspan></text>
+<text fill="white" style="white-space: pre" xml:space="preserve" font-family="Outfit" font-size="20" letter-spacing="0em"><tspan x="730" y="47.4">Contact</tspan></text>
+</g>
+<defs>
+<filter id="filter0_n_2_68411" x="-50" y="-50" width="939" height="176" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="5 5" stitchTiles="stitch" numOctaves="3" result="noise" seed="5164" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(0, 0, 0, 0.13)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_2_68411">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<clipPath id="bgblur_0_2_68411_clip_path" transform="translate(50 50)"><path d="M0 38C0 17.0132 17.0132 0 38 0H801C821.987 0 839 17.0132 839 38C839 58.9868 821.987 76 801 76H38C17.0132 76 0 58.9868 0 38Z"/>
+</clipPath><linearGradient id="paint0_linear_2_68411" x1="352.942" y1="-2.72071e-06" x2="376.072" y2="86.7274" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0.49"/>
+<stop offset="1" stop-color="#DDDDDD" stop-opacity="0.25"/>
+</linearGradient>
+</defs>
+</svg>

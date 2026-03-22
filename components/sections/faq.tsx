@@ -9,9 +9,7 @@ import {
 } from "@/components/ui/accordion"
 import { SectionHeader } from "@/components/ui/section-header"
 
-// ============================================================================
-// DATA - Edit these to customize the FAQ section
-// ============================================================================
+
 
 const FAQS = [
   {
@@ -49,18 +47,15 @@ const SECTION_CONTENT = {
     "Answers to common questions to help you understand the process and how it works.",
 }
 
-// ============================================================================
-// MAIN COMPONENT
-// ============================================================================
 
 export function FAQSection() {
   return (
-    <section id="faq" className="w-full bg-[#FAFAFA] pt-24 pb-32 px-6 md:px-12 lg:px-24 overflow-hidden flex justify-center">
-      <div className="max-w-[1280px] mx-auto w-full">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-24 w-full">
+    <section id="faq" className="w-full bg-white pt-24 pb-32 px-6 md:px-12 overflow-hidden flex justify-center scroll-mt-28">
+      <div className="max-w-[1100px] mx-auto w-full">
+        <div className="flex flex-col lg:flex-row items-start lg:justify-start gap-12 lg:gap-[250px] w-full">
 
           {/* Left Column Text */}
-          <div className="flex flex-col items-start w-full lg:w-[35%] shrink-0 pt-0 lg:pt-4">
+          <div className="flex flex-col items-start w-full lg:w-[240px] shrink-0 pt-0 lg:pt-4">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +64,7 @@ export function FAQSection() {
               className="text-black mb-6 text-4xl sm:text-[52px]"
               style={{
                 fontFamily: 'var(--font-outfit), Outfit, sans-serif',
-                fontWeight: 700,
+                fontWeight: 500,
                 lineHeight: '1.2'
               }}
             >
@@ -80,10 +75,10 @@ export function FAQSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-[#333] max-w-[340px]"
+              className="text-[#000000CC] max-w-[350px]"
               style={{
                 fontFamily: 'var(--font-outfit), Outfit, sans-serif',
-                fontSize: '18px',
+                fontSize: '20px',
                 fontWeight: 400,
                 lineHeight: '1.6'
               }}
@@ -98,14 +93,18 @@ export function FAQSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full lg:w-[60%] shrink-0"
+            className="w-full lg:w-[600px] shrink-0"
           >
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full border-t border-b border-gray-200/80"
+            >
               {FAQS.map((faq, index) => (
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-transparent border-b border-gray-200/80 first:border-t-0"
+                  className="bg-transparent border-b border-gray-200/80 last:border-b-0 first:border-t-0"
                 >
                   <AccordionTrigger
                     className="text-left font-medium text-black hover:no-underline py-6 md:py-8"

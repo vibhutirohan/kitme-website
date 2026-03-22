@@ -20,25 +20,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Kitme — Your Fashion Hub',
+  title: 'Kitme - The cloud closet that organizes, plans, and connects',
   description: 'Transform your email receipts into a digital closet experience that saves you time, money, and decision fatigue.',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/kitme icon.png',
+    apple: '/kitme icon.png',
   },
 }
 

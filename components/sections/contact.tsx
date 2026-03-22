@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="w-full bg-[#FCFCFD] py-20 px-6 md:px-12 lg:px-24 overflow-hidden flex justify-center items-center pb-32">
+    <section id="contact" className="w-full bg-[#FCFCFD] py-20 px-6 md:px-12 lg:px-24 overflow-hidden flex justify-center items-center pb-32 scroll-mt-28">
       <div className="max-w-[1280px] w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
 
         {/* Left Column: Text */}
@@ -18,7 +18,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-black mb-4 text-2xl sm:text-3xl md:text-[36px]"
+            className="text-black mb-4 text-2xl sm:text-3xl md:text-[30px]"
             style={{
               fontFamily: 'var(--font-outfit), Outfit, sans-serif',
               fontWeight: 500,
@@ -33,14 +33,14 @@ export function ContactSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-black max-w-[739px] text-3xl sm:text-4xl md:text-[48px]"
+            className="text-black max-w-[700px] text-2xl sm:text-4xl md:text-[42px]"
             style={{
               fontFamily: 'var(--font-outfit), Outfit, sans-serif',
               fontWeight: 500,
               lineHeight: '1.3'
             }}
           >
-            Have questions or feedback? Reach out to our team we&apos;d love to hear from you!
+            Have questions or feedback? Reach out to our team—we’d love to hear from you!
           </motion.h2>
         </div>
 

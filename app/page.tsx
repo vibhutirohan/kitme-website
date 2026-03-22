@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden w-full relative">
+    <main className="min-h-screen overflow-x-hidden w-full relative bg-white">
       <div id="top" className="absolute top-0 left-0" />
       <Navbar />
       <Hero />

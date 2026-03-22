@@ -3,16 +3,13 @@
 import Link from "next/link"
 import { Instagram, Linkedin } from "lucide-react"
 
-// ============================================================================
-// DATA - Edit these to customize the footer
-// ============================================================================
 
 const FOOTER_LINKS = [
   { href: "#explore", label: "Explore" },
   { href: "#solution", label: "Solution" },
   { href: "#daily-drops", label: "Daily Drops" },
   { href: "#faq", label: "FAQ" },
-  { href: "#community", label: "Community" },
+  { href: "#our-stylists", label: "Community" },
   { href: "#contact", label: "Contact" },
 ] as const
 
@@ -44,15 +41,12 @@ const BRAND = {
   copyright: "KITME - All rights reserved | Terms & Privacy Policy",
 }
 
-// ============================================================================
-// MAIN COMPONENT
-// ============================================================================
 
 import { AppStoreBadges } from "@/components/ui/app-store-badges"
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#FCF6F8] pt-28 pb-10 px-6 md:px-12 text-black font-sans">
+    <footer id="download" className="w-full bg-[#FCF6F8] pt-28 pb-10 px-6 md:px-12 text-black font-sans scroll-mt-28">
       <div className="max-w-[1280px] mx-auto w-full flex flex-col">
 
         {/* Top Section */}
@@ -83,9 +77,11 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-end md:items-end gap-10 mb-8">
           {/* Left: Logo */}
           <div>
-            <span className="font-serif text-[48px] md:text-[56px] text-black tracking-wide leading-none">
-              KITME
-            </span>
+            <img
+              src="/KITME_LOGO 1.png"
+              alt="Kitme Logo"
+              className="h-[30px] md:h-[35px] w-auto object-contain"
+            />
           </div>
 
           {/* Right: Nav Links */}

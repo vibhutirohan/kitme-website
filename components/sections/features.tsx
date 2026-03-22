@@ -13,29 +13,52 @@ function PhoneFrame({
 }) {
   return (
     <div className={`relative shrink-0 w-[245px] ${className}`}>
-      {/* Phone outer body */}
-      <div className="relative w-full rounded-[38px] bg-black p-[4px] shadow-[0_18px_35px_rgba(0,0,0,0.28),0_6px_12px_rgba(0,0,0,0.18)]">
-        {/* Screen area */}
-        <div className="relative overflow-hidden rounded-[34px] bg-white">
-          {/* Dynamic island / front camera notch */}
-          <div
-            className="absolute left-1/2 top-[8px] z-20 -translate-x-1/2 rounded-full bg-black"
-            style={{
-              width: "66.28px",
-              height: "18.139px",
-            }}
-          >
-            <span className="absolute right-[10px] top-1/2 h-[6px] w-[6px] -translate-y-1/2 rounded-full bg-[#1f1f1f] ring-1 ring-white/10" />
-          </div>
+      <img
+        src={src}
+        alt={alt}
+        className="block w-full h-auto object-contain"
+      />
+    </div>
+  )
+}
 
-          {/* Screen image */}
-          <img
-            src={src}
-            alt={alt}
-            className="block w-full h-auto object-cover"
-          />
-        </div>
-      </div>
+function FeatureTextBlock({
+  title,
+  description,
+  maxWidth = "520px",
+}: {
+  title: string
+  description: string
+  maxWidth?: string
+}) {
+  return (
+    <div className="w-full flex flex-col items-center text-center gap-4">
+      <h3
+        className="text-black text-center"
+        style={{
+          fontFamily: "Outfit, sans-serif",
+          fontSize: "24px",
+          fontStyle: "normal",
+          fontWeight: 700,
+          lineHeight: "32px",
+        }}
+      >
+        {title}
+      </h3>
+
+      <p
+        className="text-black text-center"
+        style={{
+          maxWidth,
+          fontFamily: "Outfit, sans-serif",
+          fontSize: "18px",
+          fontStyle: "normal",
+          fontWeight: 400,
+          lineHeight: "28px",
+        }}
+      >
+        {description}
+      </p>
     </div>
   )
 }
@@ -47,7 +70,7 @@ export function Features() {
   const forYouMarketImage = "/mobile4.png"
 
   return (
-    <section id="explore" className="w-full bg-white py-24 px-6 md:px-12">
+    <section id="explore" className="w-full bg-white py-24 px-6 md:px-12 scroll-mt-28">
       <div className="max-w-[1280px] mx-auto w-full">
         <div className="text-center mx-auto mb-16 flex flex-col items-center">
           <h2
@@ -56,7 +79,7 @@ export function Features() {
               maxWidth: "855px",
               fontFamily: "Outfit, sans-serif",
               fontStyle: "normal",
-              fontWeight: 500,
+              fontWeight: 400,
               lineHeight: "1.2",
             }}
           >
@@ -82,84 +105,39 @@ export function Features() {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Left Card: Sync Your Email */}
           <motion.div
+            id="sync-your-email"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col items-center text-center overflow-hidden rounded-[40px] bg-[#F3F3F3] px-6 md:px-10 py-10 md:py-12 min-h-[500px] md:min-h-[760px]"
+            className="flex flex-col items-center text-center gap-0 md:gap-1 overflow-hidden rounded-[40px] bg-[#F3F3F3] px-6 md:px-10 py-8 md:py-10 min-h-[420px] md:min-h-[620px] scroll-mt-32"
           >
             <PhoneFrame
               src={syncYourEmailImage}
               alt="Sync Your Email"
-              className="mb-10"
             />
 
-            <div className="w-full flex flex-col items-center">
-              <h3
-                className="text-black mb-4 text-center"
-                style={{
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: "24px",
-                  fontStyle: "normal",
-                  fontWeight: 700,
-                  lineHeight: "32px",
-                }}
-              >
-                Sync Your Email
-              </h3>
-
-              <p
-                className="text-black text-center"
-                style={{
-                  maxWidth: "470px",
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: "18px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "28px",
-                }}
-              >
-                Build your digital closet in minutes with our patented email scanning, then check back every day at 7PM to see your newest purchases.
-              </p>
-            </div>
+            <FeatureTextBlock
+              title="Sync Your Email"
+              description="Build your digital closet in minutes with our patented email scanning, then check back every day at 7 p.m EST to see your newest purchases."
+              maxWidth="520px"
+            />
           </motion.div>
 
           {/* Right Card: Share Your Closet */}
           <motion.div
+            id="share-your-closet"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col items-center text-center overflow-hidden rounded-[40px] bg-[#F3F3F3] px-6 md:px-10 py-10 md:py-12 min-h-[500px] md:min-h-[760px]"
+            className="flex flex-col items-center text-center gap-0 md:gap-0 overflow-hidden rounded-[40px] bg-[#F3F3F3] px-6 md:px-10 py-8 md:py-10 min-h-[420px] md:min-h-[620px] scroll-mt-32"
           >
-            <div className="w-full flex flex-col items-center">
-              <h3
-                className="text-black mb-4 mt-2 text-center"
-                style={{
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: "24px",
-                  fontStyle: "normal",
-                  fontWeight: 700,
-                  lineHeight: "32px",
-                }}
-              >
-                Share Your Closet
-              </h3>
-
-              <p
-                className="text-black text-center mb-12"
-                style={{
-                  maxWidth: "500px",
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: "18px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "28px",
-                }}
-              >
-                Make your wardrobe as public as you want. Share your outfits, get inspiration, and build a style community with the people you trust.
-              </p>
-            </div>
+            <FeatureTextBlock
+              title="Share Your Closet"
+              description="Make your wardrobe as public as you want. Share your outfits, get inspiration, and build a style community with the people you trust."
+              maxWidth="560px"
+            />
 
             <PhoneFrame
               src={shareYourClosetImage}
@@ -174,42 +152,18 @@ export function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="flex flex-col items-center text-center overflow-hidden rounded-[40px] bg-[#F3F3F3] px-6 md:px-10 py-10 md:py-12 min-h-[500px] md:min-h-[760px] scroll-mt-28"
+            className="flex flex-col items-center text-center gap-0 md:gap-1 overflow-hidden rounded-[40px] bg-[#F3F3F3] px-6 md:px-10 py-8 md:py-10 min-h-[420px] md:min-h-[620px] scroll-mt-28"
           >
             <PhoneFrame
               src={talkToStylistImage}
               alt="Talk to a stylist"
-              className="mb-10"
             />
 
-            <div className="w-full flex flex-col items-center">
-              <h3
-                className="text-black mb-4 text-center"
-                style={{
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: "24px",
-                  fontStyle: "normal",
-                  fontWeight: 700,
-                  lineHeight: "32px",
-                }}
-              >
-                Talk to a stylist
-              </h3>
-
-              <p
-                className="text-black text-center"
-                style={{
-                  maxWidth: "520px",
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: "18px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "28px",
-                }}
-              >
-                Personal styling used to be an ultra luxury. Now it's not. Meet our team of real stylists, here to help you build a wardrobe that works, from lookbooks to brand discovery to dressing for your shape.
-              </p>
-            </div>
+            <FeatureTextBlock
+              title="Talk to a stylist"
+              description="Personal styling used to be an ultra luxury. Now it's not. Meet our team of real stylists, here to help you build a wardrobe that works, from lookbooks to brand discovery to dressing for your shape."
+              maxWidth="560px"
+            />
           </motion.div>
 
           {/* Row 2, Right Card: For You Market */}
@@ -218,36 +172,13 @@ export function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col items-center text-center overflow-hidden rounded-[40px] bg-[#F3F3F3] px-6 md:px-10 py-10 md:py-12 min-h-[500px] md:min-h-[760px]"
+            className="flex flex-col items-center text-center gap-10 md:gap-12 overflow-hidden rounded-[40px] bg-[#F3F3F3] px-6 md:px-10 py-8 md:py-10 min-h-[420px] md:min-h-[620px]"
           >
-            <div className="w-full flex flex-col items-center">
-              <h3
-                className="text-black mb-4 mt-2 text-center"
-                style={{
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: "24px",
-                  fontStyle: "normal",
-                  fontWeight: 700,
-                  lineHeight: "32px",
-                }}
-              >
-                For You Market
-              </h3>
-
-              <p
-                className="text-black text-center mb-12"
-                style={{
-                  maxWidth: "430px",
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: "18px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "28px",
-                }}
-              >
-                Shop without the doomscroll. Because Kitme knows your size, your style, and your wardrobe, every item in our marketplace is already curated for you.
-              </p>
-            </div>
+            <FeatureTextBlock
+              title="For You Market"
+              description="Shop without the doomscroll. Because Kitme knows your size, your style, and your wardrobe, every item in our marketplace is already curated for you."
+              maxWidth="520px"
+            />
 
             <PhoneFrame
               src={forYouMarketImage}
