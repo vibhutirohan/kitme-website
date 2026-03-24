@@ -131,9 +131,9 @@ function PersonalizedCard({
 
 export function PersonalizedSection() {
   return (
-    <section id="solution" className="w-full bg-white py-24 px-6 md:px-12 scroll-mt-28">
+    <section id="solution" className="w-full bg-white py-10 md:py-16 px-6 md:px-12 scroll-mt-28">
       <div className="max-w-[1280px] mx-auto w-full">
-        <div className="text-center mb-16 flex justify-center w-full">
+        <div className="text-center mb-6 md:mb-10 flex justify-center w-full">
           <h2
             className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px]"
             style={{

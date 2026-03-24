@@ -34,7 +34,7 @@ export function DailyDropsSection() {
     const frontPhoneImage = "/daily drops phone1.png"
 
     return (
-        <section id="daily-drops" className="w-full bg-white py-[60px] md:py-[80px] lg:py-[80px] px-6 md:px-12 scroll-mt-28">
+        <section id="daily-drops" className="w-full bg-white py-6 md:py-14 px-6 md:px-12 scroll-mt-28">
             <div className="max-w-[1300px] mx-auto w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-6 lg:gap-16">
                     {/* Left side */}

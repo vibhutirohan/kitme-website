@@ -6,12 +6,7 @@ import { motion } from "framer-motion"
 
 
 const TESTIMONIALS = [
-  {
-    image: "/Girl 1.png",
-    text: "With the Kitme community, your closet becomes part of something bigger. Browse real wardrobes, see how friends and creators style their looks, and draw inspiration from people you love.",
-    name: "Anton de Swardt",
-    variant: "centered",
-  },
+
   {
     image: "/Girl 2.jpg",
     text: "I didn’t realize how much I was overbuying until I started using Kitme. Being able to see and organize everything in my wardrobe in one place has completely changed how I shop. It constantly reminds me of what I already own, which makes it so much easier to style outfits and avoid buying duplicates or things that are too similar. It’s honestly made me more intentional, more creative, and way less wasteful with my closet.",
@@ -113,7 +108,7 @@ function TestimonialCard({
           type="button"
           onClick={onClickNext}
           aria-label="Next testimonial"
-          className="absolute right-[-15px] md:right-[-20px] top-1/2 -translate-y-1/2 flex items-center justify-center z-20 hover:scale-110 transition-transform active:scale-95"
+          className="absolute right-[-15px] md:right-[-20px] top-1/2 -translate-y-1/2 hidden md:flex items-center justify-center z-20 hover:scale-110 transition-transform active:scale-95"
         >
           <img
             src="/arrow.svg"
@@ -213,7 +208,7 @@ export function CommunitySection() {
   return (
     <section
       id="our-stylists"
-      className="w-full bg-white py-20 px-6 lg:px-0 overflow-hidden scroll-mt-28"
+      className="w-full bg-white py-6 md:py-12 px-6 lg:px-0 overflow-hidden scroll-mt-28"
     >
       <div className="max-w-[1400px] mx-auto w-full lg:pl-16 xl:pl-24">
         <div className="flex flex-col lg:flex-row items-center lg:items-center gap-10 md:gap-12 lg:gap-12 w-full">

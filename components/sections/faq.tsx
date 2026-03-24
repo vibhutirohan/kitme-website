@@ -50,7 +50,7 @@ const SECTION_CONTENT = {
 
 export function FAQSection() {
   return (
-    <section id="faq" className="w-full bg-white pt-24 pb-32 px-6 md:px-12 overflow-hidden flex justify-center scroll-mt-28">
+    <section id="faq" className="w-full bg-white py-8 md:py-14 px-6 md:px-12 overflow-hidden flex justify-center scroll-mt-28">
       <div className="max-w-[1100px] mx-auto w-full">
         <div className="flex flex-col lg:flex-row items-start lg:justify-start gap-12 lg:gap-[250px] w-full">
 

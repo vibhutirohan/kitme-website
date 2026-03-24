@@ -154,11 +154,11 @@ export function Hero() {
       <div className="absolute top-1/4 left-8 w-32 h-32 bg-white/3 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/3 right-12 w-48 h-48 bg-white/3 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-20 pb-4 sm:pt-24 sm:pb-8">
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center pt-10 pb-1 sm:pt-16 sm:pb-2 md:pt-20 md:pb-4">
         <HeroContent />
       </div>
 
-      <div className="relative z-20 pb-8 sm:pb-12 pt-4">
+      <div className="relative z-20 pb-4 sm:pb-6 md:pb-8 pt-2">
         <HeroFeatures />
       </div>
     </section>

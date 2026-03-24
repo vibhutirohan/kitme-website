@@ -46,11 +46,11 @@ import { AppStoreBadges } from "@/components/ui/app-store-badges"
 
 export function Footer() {
   return (
-    <footer id="download" className="w-full bg-[#FCF6F8] pt-28 pb-10 px-6 md:px-12 text-black font-sans scroll-mt-28">
+    <footer id="download" className="w-full bg-[#FCF6F8] pt-8 pb-4 md:pt-14 md:pb-8 px-6 md:px-12 text-black font-sans scroll-mt-28">
       <div className="max-w-[1280px] mx-auto w-full flex flex-col">
 
         {/* Top Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start mb-40 gap-16">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-10 md:mb-16 gap-16">
           {/* Left: Tagline and Badges */}
           <div className="flex flex-col gap-8">
             <h2 className="font-sans text-[36px] xs:text-[48px] md:text-[64px] lg:text-[76px] font-medium tracking-tight leading-none text-black">

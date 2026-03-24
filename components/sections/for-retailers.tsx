@@ -50,9 +50,9 @@ export function ForRetailersSection() {
     ]
 
     return (
-        <section id="retailers" className="w-full bg-white py-[60px] lg:py-[80px] px-6 md:px-12 flex flex-col items-center scroll-mt-28">
+        <section id="retailers" className="w-full bg-white py-6 lg:py-14 px-6 md:px-12 flex flex-col items-center scroll-mt-28">
             <div className="max-w-[1400px] mx-auto w-full flex flex-col items-center">
-                <div className="flex flex-col items-center text-center mb-[40px] lg:mb-[48px] w-full">
+                <div className="flex flex-col items-center text-center mb-4 lg:mb-10 w-full">
                     <span
                         className="text-[#FF1058] font-medium text-center mb-[12px] text-[16px] leading-[22px] md:text-[20px] md:leading-[24px] lg:text-[24px] lg:leading-[28px]"
                         style={{ fontFamily: "var(--font-outfit), Outfit, sans-serif" }}
