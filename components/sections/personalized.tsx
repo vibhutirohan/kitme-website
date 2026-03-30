@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import type { ReactNode } from "react"
 
-
 const CARDS: {
   iconSrc: string
   title: ReactNode
@@ -55,7 +54,6 @@ const CARDS: {
     },
   ]
 
-
 interface PersonalizedCardProps {
   iconSrc: string
   title: ReactNode
@@ -82,18 +80,18 @@ function PersonalizedCard({
       className="group relative overflow-hidden rounded-[32px] bg-[#F8F8F8] px-8 py-8 md:px-10 md:py-10 flex flex-col justify-start min-h-[340px] md:min-h-[380px]"
     >
       <div
-        className="absolute top-8 right-8 flex h-[76px] w-[74px] items-center justify-center bg-center bg-no-repeat bg-contain"
+        className="absolute top-6 right-6 md:top-8 md:right-8 flex h-[58px] w-[58px] md:h-[76px] md:w-[74px] items-center justify-center bg-center bg-no-repeat bg-contain"
         style={{ backgroundImage: "url('/Ellipse 271.svg')" }}
       >
         <img
           src={iconSrc}
           alt="Icon"
-          className="h-7 w-7 object-contain"
+          className="h-5 w-5 md:h-7 md:w-7 object-contain"
           style={{ filter: "brightness(0) saturate(100%)" }}
         />
       </div>
 
-      <div className="mt-20 flex w-full flex-col items-start text-left">
+      <div className="mt-16 md:mt-20 flex w-full flex-col items-start text-left">
         <h3
           className="mb-4 text-left text-3xl md:text-4xl lg:text-[44px]"
           style={{
@@ -128,10 +126,12 @@ function PersonalizedCard({
   )
 }
 
-
 export function PersonalizedSection() {
   return (
-    <section id="solution" className="w-full bg-white py-10 md:py-16 px-6 md:px-12 scroll-mt-28">
+    <section
+      id="solution"
+      className="w-full bg-white py-6 md:py-16 px-6 md:px-12 scroll-mt-28"
+    >
       <div className="max-w-[1280px] mx-auto w-full">
         <div className="text-center mb-6 md:mb-10 flex justify-center w-full">
           <h2

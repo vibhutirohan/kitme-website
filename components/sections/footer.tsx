@@ -46,7 +46,7 @@ import { AppStoreBadges } from "@/components/ui/app-store-badges"
 
 export function Footer() {
   return (
-    <footer id="download" className="w-full bg-[#FCF6F8] pt-8 pb-4 md:pt-14 md:pb-8 px-6 md:px-12 text-black font-sans scroll-mt-28">
+    <footer id="download" className="w-full bg-[#FCF6F8] pt-6 pb-4 md:pt-14 md:pb-8 px-6 md:px-12 text-black font-sans scroll-mt-28">
       <div className="max-w-[1280px] mx-auto w-full flex flex-col">
 
         {/* Top Section */}

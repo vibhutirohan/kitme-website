@@ -208,7 +208,7 @@ export function CommunitySection() {
   return (
     <section
       id="our-stylists"
-      className="w-full bg-white py-6 md:py-12 px-6 lg:px-0 overflow-hidden scroll-mt-28"
+      className="w-full bg-white py-4 md:py-12 px-6 lg:px-0 overflow-hidden scroll-mt-28"
     >
       <div className="max-w-[1400px] mx-auto w-full lg:pl-16 xl:pl-24">
         <div className="flex flex-col lg:flex-row items-center lg:items-center gap-10 md:gap-12 lg:gap-12 w-full">

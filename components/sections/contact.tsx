@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 
 export function ContactSection() {
   return (
-    <section id="contact" className="w-full bg-[#FCFCFD] py-8 md:py-14 px-6 md:px-12 lg:px-24 overflow-hidden flex justify-center items-center scroll-mt-28">
+    <section id="contact" className="w-full bg-[#FCFCFD] py-4 md:py-14 px-6 md:px-12 lg:px-24 overflow-hidden flex justify-center items-center scroll-mt-28">
       <div className="max-w-[1280px] w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24">
 
         {/* Left Column: Text */}

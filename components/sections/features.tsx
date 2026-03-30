@@ -70,7 +70,7 @@ export function Features() {
   const forYouMarketImage = "/mobile4.png"
 
   return (
-    <section id="explore" className="w-full bg-white py-10 md:py-16 px-6 md:px-12 scroll-mt-28">
+    <section id="explore" className="w-full bg-white py-6 md:py-16 px-6 md:px-12 scroll-mt-28">
       <div className="max-w-[1280px] mx-auto w-full">
         <div className="text-center mx-auto mb-6 md:mb-10 flex flex-col items-center">
           <h2

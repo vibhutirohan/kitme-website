@@ -50,7 +50,7 @@ export function ForRetailersSection() {
     ]
 
     return (
-        <section id="retailers" className="w-full bg-white py-6 lg:py-14 px-6 md:px-12 flex flex-col items-center scroll-mt-28">
+        <section id="retailers" className="w-full bg-white py-4 lg:py-14 px-6 md:px-12 flex flex-col items-center scroll-mt-28">
             <div className="max-w-[1400px] mx-auto w-full flex flex-col items-center">
                 <div className="flex flex-col items-center text-center mb-4 lg:mb-10 w-full">
                     <span
