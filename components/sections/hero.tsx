@@ -78,7 +78,7 @@ function HeroContent() {
 
         <h1
           className="text-[2.2rem] xs:text-4xl sm:text-5xl md:text-7xl lg:text-[96px] font-medium mb-4 sm:mb-6 leading-[1.2] lg:leading-[115px] tracking-tight lg:tracking-[-1.92px]"
-          style={{ fontFamily: 'var(--font-outfit), Outfit, sans-serif' }}
+          style={{ fontFamily: "var(--font-outfit), Outfit, sans-serif" }}
         >
           <span className="inline-block sm:mr-3 text-[#F1BFCE]">
             {HERO_CONTENT.headline.line1}
@@ -139,7 +139,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative w-full min-h-screen flex flex-col justify-between rounded-bl-[60px] rounded-br-[60px] overflow-hidden scroll-mt-28"
+      className="relative w-full min-h-screen flex flex-col justify-between overflow-hidden scroll-mt-28"
     >
       <div className="absolute inset-0 z-0">
         <img
